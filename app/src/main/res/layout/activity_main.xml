@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_getCityID"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/city_name"
+        android:text="Get PIN CODE"
+        app:layout_constraintEnd_toStartOf="@id/btn_getWeatherBYCityID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_getWeatherBYCityID"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET CITY NAME"
+        app:layout_constraintEnd_toStartOf="@id/btn_getWeatherBYCityName"
+        app:layout_constraintStart_toEndOf="@+id/btn_getCityID"
+        app:layout_constraintTop_toTopOf="@+id/btn_getCityID" />
+
+    <Button
+        android:id="@+id/btn_getWeatherBYCityName"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET WEATHER"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_getWeatherBYCityID"
+        app:layout_constraintTop_toTopOf="@+id/btn_getCityID" />
+
+    <EditText
+        android:id="@+id/et_dataInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_getCityID" />
+
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="625dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_dataInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
